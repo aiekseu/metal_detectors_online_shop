@@ -1,20 +1,21 @@
-import { Breadcrumbs, Divider, makeStyles, Typography } from '@material-ui/core';
+import { Breadcrumbs, Divider, makeStyles, Typography } from '@material-ui/core'
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
+
 
 const BreadCrumb = ({ thisRoute }) => {
     const classes = useStyles()
     return (
         <div>
             <Breadcrumbs className={classes.root} aria-label="breadcrumb">
-                <Link className={classes.linkItems} to="/" >Home</Link>
+                <Link className={classes.linkItems} to="/">Главная</Link>
                 {
                     thisRoute !== 'shop' &&
-                    <Link className={classes.linkItems} color="inherit" to="/shop">Shop</Link>
+                    <Link className={classes.linkItems} color="inherit" to="/shop">Каталог</Link>
                 }
                 <Typography className={classes.activeMenu}>{thisRoute}</Typography>
             </Breadcrumbs>
-            <Divider />
+            <Divider/>
         </div>
     )
 }
@@ -26,12 +27,11 @@ const useStyles = makeStyles(theme => ({
     },
     linkItems: {
         color: theme.palette.secondary.main,
-        textDecoration: 'none'
+        textDecoration: 'none',
     },
     activeMenu: {
-        color: theme.palette.primary.main
-    }
-}));
-
+        color: theme.palette.primary.main,
+    },
+}))
 
 export default BreadCrumb

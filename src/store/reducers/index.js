@@ -1,12 +1,9 @@
-import { combineReducers } from "redux";
-import cartReducer from "./cart_reducer";
-import filterReducer from "./filter_reducer";
-import authReducer from "./auth-reducer";
+import { combineReducers } from 'redux'
+import authReducer from './auth-reducer'
+
 
 const reducers = combineReducers({
-  cartReducer,
-  filterReducer,
-  authReducer,
-});
+    authReducer,
+})
 
-export default reducers;
+export default reducers

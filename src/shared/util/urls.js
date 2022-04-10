@@ -1,0 +1,1 @@
+export const API_SOURCE = 'https://d5dck76tgkaqu442gkc0.apigw.yandexcloud.net/'

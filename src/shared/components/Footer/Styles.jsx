@@ -1,12 +1,13 @@
-import { makeStyles } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core'
+
 
 const useStyles = makeStyles(theme => ({
     root: {
         backgroundColor: theme.palette.secondary.dark,
         color: '#fff',
         [ theme.breakpoints.down('sm') ]: {
-            textAlign: 'center'
-        }
+            textAlign: 'center',
+        },
     },
     footerHeading: {
         textTransform: 'uppercase',
@@ -16,7 +17,7 @@ const useStyles = makeStyles(theme => ({
         [ theme.breakpoints.down('sm') ]: {
             position: 'relative',
             display: 'flex',
-            justifyContent: 'center'
+            justifyContent: 'center',
         },
         '&:before': {
             content: '""',
@@ -30,37 +31,37 @@ const useStyles = makeStyles(theme => ({
             [ theme.breakpoints.down('sm') ]: {
                 position: 'relative',
                 bottom: -5,
-                left: -10
+                left: -10,
             },
-        }
+        },
     },
     spacingLeft: {
-        marginLeft: theme.spacing(1)
+        marginLeft: theme.spacing(1),
     },
     footerList: {
         padding: '0 1rem',
         [ theme.breakpoints.down('sm') ]: {
-            listStyle: 'none'
+            listStyle: 'none',
         },
         '& li': {
             cursor: 'pointer',
             margin: '8px 0',
             '&:hover': {
-                color: theme.palette.primary.main
-            }
-        }
+                color: theme.palette.primary.main,
+            },
+        },
     },
     boxResponsiveStyles: {
         [ theme.breakpoints.down('sm') ]: {
             display: 'flex',
             justifyContent: 'center',
-        }
+        },
     },
     boxScreenCenter: {
         [ theme.breakpoints.down('sm') ]: {
             justifyContent: 'center',
-        }
-    }
-}));
+        },
+    },
+}))
 
 export default useStyles
